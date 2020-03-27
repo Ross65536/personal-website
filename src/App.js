@@ -34,9 +34,9 @@ function App() {
           </h3>
           <nav id="top-bar">
             <ul>
-              <li><Link to="/">Projects</Link></li>
-              <li><Link to="/resume">Resume</Link></li>
-              <li><Link to="/about">About</Link></li>
+              <li><Link to="./">Projects</Link></li>
+              <li><Link to="resume">Resume</Link></li>
+              <li><Link to="about">About</Link></li>
             </ul>
           </nav>
         </header>
@@ -44,13 +44,13 @@ function App() {
         {/* BODY */}
         <div id="page-content">
           <Switch>
-            <Route exact path="/">
+            <Route exact path="./">
               <Projects />
             </Route>
-            <Route path="/about">
+            <Route path="about">
               <About />
             </Route>
-            <Route path="/resume">
+            <Route path="resume">
               <Resume />
             </Route>
           </Switch>
