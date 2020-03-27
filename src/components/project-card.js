@@ -26,7 +26,7 @@ export class ProjectCard extends React.Component {
 
   buildButton(name) {
     return (
-      <button type="button" className={`btn btn-sm ${this.props.activeButtons[name] ? 'active' : ''}`} onClick={() => this.handleButton(name)}>{name}</button>
+      <button key={name} type="button" className={`btn btn-sm ${this.props.activeButtons[name] ? 'active' : ''}`} onClick={() => this.handleButton(name)}>{name}</button>
     )
   }
 
@@ -58,7 +58,7 @@ export class ProjectCard extends React.Component {
       return (<div></div>)
     else
       return (
-        <div class="card">
+        <div class="card" key={this.props.title}>
           <div class="card-body">
             <h2 class="card-title">
               <span>{this.props.title} </span>
@@ -71,7 +71,7 @@ export class ProjectCard extends React.Component {
             {this.buildTypes("Lang: ", this.props.languages)}
           </ul>
           <div class="card-body">
-            {this.buildLinks(this.props.links)}
+            {this.props.links}
           </div>
         </div>
       );

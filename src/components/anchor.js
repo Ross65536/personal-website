@@ -13,7 +13,7 @@ export default class Anchor extends React.Component {
 
   render() {
     return (
-      <a href={this.props.url}>{this.props.icon} {this.props.name} </a>
+      <a key={this.props.url} href={this.props.url}>{this.props.icon} {this.props.name} </a>
     );
 
   }
