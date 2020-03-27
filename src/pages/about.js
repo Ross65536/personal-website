@@ -5,7 +5,7 @@ export default function About() {
     <div>
       <h2>About</h2>
 
-        This website is built using ReactJS
+        This website is running on ReactJS.
     </div>
   );
 }
