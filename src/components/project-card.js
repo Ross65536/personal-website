@@ -6,12 +6,16 @@ export class ProjectCard extends React.Component {
   constructor(props) {
     super(props);
 
-    [...props.types, ...props.languages, ...props.technologies].forEach(name => this.props.toggleActiveButtons(name, false));
+    [...props.types, ...props.languages, ...this.getTechs()].forEach(name => this.props.toggleActiveButtons(name, false));
 
   }
 
+  getTechs() {
+    return this.props.technologies === undefined ? [] : this.props.technologies;
+  }
+
   shouldHide() {
-    const names = [...this.props.types, ...this.props.languages, ...this.props.technologies];
+    const names = [...this.props.types, ...this.props.languages, ...this.getTechs()];
 
     const shouldHide = Object.entries(this.props.activeButtons)
       .filter(entry => entry[1] === true)
@@ -35,6 +39,9 @@ export class ProjectCard extends React.Component {
   }
 
   buildTypes(typename, buttonNames) {
+    if (buttonNames === undefined) 
+      return;
+
     return (
       <li class="list-group-item card-tags">
         <div>

@@ -5,7 +5,8 @@ export const ICONS = {
   github: <i class="fab fa-github"/>,
   linkedin: <i class="fab fa-linkedin"/>,
   email: <i class="fas fa-envelope"/>,
-  android_store: <i class="fab fa-google-play"/>
+  android_store: <i class="fab fa-google-play"/>,
+  wikipedia: <i class="fab fa-wikipedia-w"/>,
 };
 
 
