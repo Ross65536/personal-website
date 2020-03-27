@@ -8,17 +8,18 @@ import {
   Link
 } from "react-router-dom";
 
+import CONSTANTS from './constants.js';
 
 import About from './pages/about.js'
 import Projects from './pages/projects.js'
 import Resume from './pages/resume.js'
 
-const NAME = "Rostyslav Khoptiy"
-const PROFESSION = "Software Engineer"
-const GITHUB_URL = "https://github.com/Ross65536"
+const NAME = CONSTANTS.name;
+const PROFESSION = "Software Engineer";
+const GITHUB_URL = "https://github.com/Ross65536";
 const LINKEDIN_URL = "https://www.linkedin.com/in/rostyslav-khoptiy/";
 const ANDROID_PLAY_STORE = "https://play.google.com/store/apps/developer?id=Ros+Software";
-const EMAIL = "rk65536@protonmail.com"
+const EMAIL = "rk65536@protonmail.com";
 
 function App() {
   return (
