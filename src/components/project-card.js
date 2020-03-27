@@ -16,7 +16,6 @@ export class ProjectCard extends React.Component {
     const shouldHide = Object.entries(this.props.activeButtons)
       .filter(entry => entry[1] === true)
       .some(entry => !names.includes(entry[0]));
-    console.log(this.props.activeButtons);
 
     return shouldHide;
   }
@@ -27,7 +26,7 @@ export class ProjectCard extends React.Component {
 
   buildButton(name) {
     return (
-      <button type="button" class="btn btn-sm" onClick={() => this.handleButton(name)}>{name}</button>
+      <button type="button" className={`btn btn-sm ${this.props.activeButtons[name] ? 'active' : ''}`} onClick={() => this.handleButton(name)}>{name}</button>
     )
   }
 
