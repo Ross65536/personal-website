@@ -20,7 +20,6 @@ yarn i
 
   yarn build
 
-- Deployment
+- Deployment to Github Pages
 
-  yarn build
   yarn run deploy-gh
