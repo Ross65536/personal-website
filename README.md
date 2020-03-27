@@ -20,3 +20,7 @@ yarn i
 
   yarn build
 
+- Deployment
+
+  yarn build
+  yarn run deploy-gh
