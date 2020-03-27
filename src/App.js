@@ -8,6 +8,7 @@ import {
   Link
 } from "react-router-dom";
 
+
 import About from './pages/about.js'
 import Projects from './pages/projects.js'
 import Resume from './pages/resume.js'
@@ -27,14 +28,14 @@ function App() {
         {/* HEADER */}
         <header id="header">
           <h1 id="name">
-            <Link to="/">{NAME}</Link>
+            <Link to="./">{NAME}</Link>
           </h1>
           <h3 id="profession">
             {PROFESSION}
           </h3>
           <nav id="top-bar">
             <ul>
-              <li><Link to="./">Projects</Link></li>
+              <li><Link to='./'>Projects</Link></li>
               <li><Link to="resume">Resume</Link></li>
               <li><Link to="about">About</Link></li>
             </ul>
@@ -44,14 +45,14 @@ function App() {
         {/* BODY */}
         <div id="page-content">
           <Switch>
-            <Route exact path="./">
-              <Projects />
-            </Route>
-            <Route path="about">
+            <Route path='*/about' >
               <About />
             </Route>
-            <Route path="resume">
+            <Route path='*/resume'>
               <Resume />
+            </Route>
+            <Route exact path="*/">
+              <Projects />
             </Route>
           </Switch>
         </div>
