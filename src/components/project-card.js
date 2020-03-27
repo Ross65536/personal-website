@@ -1,9 +1,34 @@
 import React from 'react';
 
+
 export class ProjectCard extends React.Component {
 
+  constructor(props) {
+    super(props);
+
+    [...props.types, ...props.languages, ...props.technologies].forEach(name => this.props.toggleActiveButtons(name, false));
+
+  }
+
+  shouldHide() {
+    const names = [...this.props.types, ...this.props.languages, ...this.props.technologies];
+
+    const shouldHide = Object.entries(this.props.activeButtons)
+      .filter(entry => entry[1] === true)
+      .some(entry => !names.includes(entry[0]));
+    console.log(this.props.activeButtons);
+
+    return shouldHide;
+  }
+
+  handleButton = (name) => {
+    this.props.toggleActiveButtons(name, !this.props.activeButtons[name]);
+  }
+
   buildButton(name) {
-    return <button type="button" class="btn btn-sm" >{ name }</button>
+    return (
+      <button type="button" class="btn btn-sm" onClick={() => this.handleButton(name)}>{name}</button>
+    )
   }
 
   buildButtons(buttonNames) {
@@ -11,14 +36,14 @@ export class ProjectCard extends React.Component {
   }
 
   buildTypes(typename, buttonNames) {
-    return ( 
+    return (
       <li class="list-group-item card-tags">
-          <div>
-              <b>{ typename }</b>
-          </div>
-          <div>
-            {this.buildButtons(buttonNames)}
-          </div>
+        <div>
+          <b>{typename}</b>
+        </div>
+        <div>
+          {this.buildButtons(buttonNames)}
+        </div>
       </li>
     )
   }
@@ -27,27 +52,30 @@ export class ProjectCard extends React.Component {
     return links.map((link) => <span>{link}</span>)
   }
 
+
   render() {
 
-    return (
-      <div class="card">
-        <div class="card-body">
+    if (this.shouldHide())
+      return (<div></div>)
+    else
+      return (
+        <div class="card">
+          <div class="card-body">
             <h2 class="card-title">
-              <span>{ this.props.title } </span>
-              { this.buildButtons(this.props.types) }
+              <span>{this.props.title} </span>
+              {this.buildButtons(this.props.types)}
             </h2>
-            <p class="card-text">{ this.props.description }</p>
+            <div class="card-text">{this.props.description}</div>
+          </div>
+          <ul class="list-group list-group-flush" >
+            {this.buildTypes("Tech: ", this.props.technologies)}
+            {this.buildTypes("Lang: ", this.props.languages)}
+          </ul>
+          <div class="card-body">
+            {this.buildLinks(this.props.links)}
+          </div>
         </div>
-        <ul class="list-group list-group-flush" >
-            { this.buildTypes("Tech: ", this.props.technologies)}
-            { this.buildTypes("Lang: ", this.props.languages)}
-        </ul>
-        <div class="card-body">
-            { this.buildLinks(this.props.links) }
-        </div>
-    </div>
-    );
-
+      );
   }
-}
 
+}
