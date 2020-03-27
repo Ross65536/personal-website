@@ -13,7 +13,8 @@
     button {
         // background-color: #5d7bdf;
         border-width: 0;
-        margin-bottom: 0.4rem
+        margin-bottom: 0.4rem;
+        margin-left: 0.2rem;
     }
 
     .card-tags {
@@ -24,6 +25,10 @@
         div:first-child {
             margin-right: 0.5rem;
         }
+    }
+
+    .card-body a {
+        margin-right: 0.5rem;
     }
 }
 

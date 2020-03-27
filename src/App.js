@@ -13,6 +13,7 @@ import CONSTANTS from './constants.js';
 import About from './pages/about.js'
 import Projects from './pages/projects.js'
 import Resume from './pages/resume.js'
+import Anchor, { ICONS } from './components/anchor.js';
 
 const NAME = CONSTANTS.name;
 const PROFESSION = "Software Engineer";
@@ -61,10 +62,10 @@ function App() {
         {/* FOOTER */}
         <footer id="footer">
           <ul>
-          <li><a href={GITHUB_URL}><i class="fab fa-github"/> GitHub </a></li>
-          <li><a href={LINKEDIN_URL}><i class="fab fa-linkedin"/> LinkedIn </a></li>
-          <li><a href={"mailto:" + EMAIL}><i class="fas fa-envelope"/> E-Mail</a></li>
-          <li><a href={ANDROID_PLAY_STORE}><i class="fab fa-google-play"/> Android Store </a></li>
+            <li><Anchor name="Github" url={GITHUB_URL} icon={ICONS.github} /></li>
+            <li><Anchor name="LinkedIn" url={LINKEDIN_URL} icon={ICONS.linkedin}/></li>
+            <li><Anchor name="E-Mail" url={"mailto:" + EMAIL} icon={ICONS.email}/></li>
+            <li><Anchor name="Android Store" url={ANDROID_PLAY_STORE} icon={ICONS.android_store}/></li>
           </ul>
         </footer>
 
