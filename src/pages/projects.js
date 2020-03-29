@@ -41,7 +41,7 @@ export default class Project extends React.Component {
               description={
                 <div>Android app for mixing music. Can generate basic sounds like, sinewaves, mix multiple tracks and export music</div>
               }
-              types={['Mobile']}
+              types={['Mobile', 'Big', '2018']}
               technologies={['Xamarin', 'Android']}
               languages={['C#']}
               links={[
@@ -57,7 +57,7 @@ export default class Project extends React.Component {
               description={
                 <div>Android game. The player controls a turret stuck on a planet and tries to destroy other planets. Features realistic in-house space ballistics physics.</div>
               }
-              types={['Mobile', 'Game']}
+              types={['Mobile', 'Game', 'Big', '2017']}
               technologies={['Kivy', 'Android']}
               languages={['Python']}
               links={[
@@ -72,7 +72,7 @@ export default class Project extends React.Component {
               description={
                 <div>A Conway game of life implementation in the CLI using rust. Features CI and full unit testing. </div>
               }
-              types={['CLI']}
+              types={['CLI', 'Small', '2018', '2019']}
               languages={['Rust']}
               links={[
                 <Anchor name="Source" url='https://github.com/Ross65536/conway-game-of-life-rs' icon={ICONS.github} />
@@ -86,7 +86,7 @@ export default class Project extends React.Component {
               description={
                 <div>A personal website written in Django with a full backend. Features a custom design, on which this website is based.</div>
               }
-              types={['Web']}
+              types={['Web', 'Medium', '2018']}
               technologies={['Django', 'HTML', 'CSS', 'Docker']}
               languages={['Python', 'Javascript']}
               links={[
@@ -101,11 +101,27 @@ export default class Project extends React.Component {
               description={
                 <div>An interpreter for the brainfuck esoteric language. Tested using a few sample source files and compared with expected outputs. Written in Rust</div>
               }
-              types={['Systems']}
+              types={['Systems', 'Small', '2019']}
               languages={['Rust']}
               links={[
                 <Anchor name="Source" url='https://github.com/Ross65536/rbf' icon={ICONS.github} />,
                 <Anchor name="Brainfuck" url='https://en.wikipedia.org/wiki/Brainfuck' icon={ICONS.wikipedia} />
+              ]}
+              activeButtons={this.state.activeButtons}
+              toggleActiveButtons={this.toggleActiveButtons}
+            />
+
+            <ProjectCard
+              title="Giphy Frontend"
+              description={
+                <div>An SPA front-end for Giphy, a GIF search engine, written in ReactJS. Features gif search and bookmarking using browser local-storage.</div>
+              }
+              types={['Web', 'Small', '2018']}
+              technologies={['HTML', 'CSS', 'ReactJS']}
+              languages={['Javascript']}
+              links={[
+                <Anchor name="Source" url='https://github.com/Ross65536/Giphy-React' icon={ICONS.github} />,
+                <Anchor name="Website" url='https://ross65536.github.io/Giphy-React/' icon={ICONS.none} />
               ]}
               activeButtons={this.state.activeButtons}
               toggleActiveButtons={this.toggleActiveButtons}
@@ -123,7 +139,7 @@ export default class Project extends React.Component {
                 description={
                   <div>An extension to the Linux kernel with real-time process schedulers meant to be run on a Raspberry Pi. Implemented as part of an internsip at CISTER. Complemented by test userland programs running a sensor+actuator system developed by my internship colleague.</div>
                 }
-                types={['CISTER', 'Systems']}
+                types={['CISTER', 'Systems', 'Big', '2017']}
                 technologies={['Linux']}
                 languages={['C']}
                 links={[
@@ -139,7 +155,7 @@ export default class Project extends React.Component {
                 description={
                   <div>HTTP+JSON Clients developed for the API services provided by InvisibleCLoud for managing debt collection. Clients were developed in Java, C# and Go, each of which was thoroughly tested and validated through CI. Developed as part of internship and mantained as part of subsequent work.</div>
                 }
-                types={['InvisibleCloud']}
+                types={['InvisibleCloud', '2018', '2019']}
                 technologies={['CI']}
                 languages={['C#', 'Java', 'Go']}
                 links={[

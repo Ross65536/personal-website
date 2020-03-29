@@ -11,7 +11,7 @@
       background-color: $text-color;
       border-width: 0;
       margin-bottom: 0.4rem;
-      margin-left: 0.3rem;
+      margin-right: 0.3rem;
     }
     
     button.active {
@@ -20,7 +20,6 @@
 
     button:hover {
       background-color: $anchor-color;
-      // background-color: #4CAF50; /* Green */
     }
 
     .card-title {

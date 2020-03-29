@@ -70,7 +70,7 @@ export class ProjectCard extends React.Component {
         <div class="card" key={this.props.title}>
           <div class="card-body">
             <h2 class="card-title">
-              <span>{this.props.title} </span>
+              <span>{this.props.title} </span><br/>
               {this.buildButtons(this.props.types)}
             </h2>
             <div class="card-text">{this.props.description}</div>
