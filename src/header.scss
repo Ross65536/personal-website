@@ -20,6 +20,7 @@
 }
 
 #header {
+  flex-grow: 1;
   padding: 1rem 3rem 1rem;
   ul {
     display: flex;
@@ -45,20 +46,39 @@
 //////////////////////////
 
 @media (max-width: 60rem) {
+  #header-top {
+    img {
+      width: 33%;
+    }
+  }
+
+  #header {
+    #name {
+      font-size: 28pt;
+    }
+  }
+
   body, html {
       width: 100%;
   }
 }
 
 @media (max-width: 680px) {
+  
   #header {
     li a {
-      font-size: 15pt;
+      font-size: 14pt;
     }
   }
 }
 
 @media (max-width: 35rem) {  
+  #header-top {
+    img {
+      width: 28%;
+    }
+  }
+
   #header {
       padding: 1rem 1rem 1rem;
       ul li {
