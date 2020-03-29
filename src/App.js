@@ -13,6 +13,8 @@ import {
 
 
 import './App.scss';
+import './header.scss';
+import './footer.scss';
 
 import CONSTANTS from './constants.js';
 import About from './pages/about.js'
@@ -27,6 +29,8 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/rostyslav-khoptiy/";
 const ANDROID_PLAY_STORE = "https://play.google.com/store/apps/developer?id=Ros+Software";
 const EMAIL = "rk65536@protonmail.com";
 
+const PROFILE_PIC_URL = process.env.PUBLIC_URL + '/profile.jpeg';
+
 function App() {
   return (
     <div className="App" id="main">
@@ -34,6 +38,7 @@ function App() {
 
         {/* HEADER */}
         <header id="header">
+          <img src={PROFILE_PIC_URL}/>
           <h1 id="name">
             <Link to="./">{NAME}</Link>
           </h1>
