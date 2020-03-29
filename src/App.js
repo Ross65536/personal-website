@@ -1,4 +1,7 @@
-import './App.scss';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// check if bootstrap JS necessary: https://getbootstrap.com/docs/3.4/javascript/
+// import 'bootstrap/dist/js/bootstrap.min.js';
 
 import React from 'react';
 import {
@@ -8,8 +11,10 @@ import {
   Link
 } from "react-router-dom";
 
-import CONSTANTS from './constants.js';
 
+import './App.scss';
+
+import CONSTANTS from './constants.js';
 import About from './pages/about.js'
 import Projects from './pages/projects.js'
 import Resume from './pages/resume.js'
