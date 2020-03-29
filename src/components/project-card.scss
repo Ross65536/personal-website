@@ -3,27 +3,29 @@
 
 
 #page-content .card {
+    margin-bottom: 1rem;
+    background-color: $card-background-color;
+
+
     button {
-        background-color: $text-color;
+      background-color: $text-color;
+      border-width: 0;
+      margin-bottom: 0.4rem;
+      margin-left: 0.3rem;
     }
     
     button.active {
         background-color: $anchor-color; 
     }
 
-    margin-bottom: 1rem;
-    background-color: $card-background-color;
+    button:hover {
+      background-color: $anchor-color;
+      // background-color: #4CAF50; /* Green */
+    }
 
     .card-title {
         margin-bottom: 1.5rem;
         font-weight: 900;
-    }
-
-    button {
-        // background-color: #5d7bdf;
-        border-width: 0;
-        margin-bottom: 0.4rem;
-        margin-left: 0.2rem;
     }
 
     .card-tags {

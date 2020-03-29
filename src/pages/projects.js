@@ -57,7 +57,7 @@ export default class Project extends React.Component {
               description={
                 <div>Android game. The player controls a turret stuck on a planet and tries to destroy other planets. Features realistic in-house space ballistics physics.</div>
               }
-              types={['Mobile']}
+              types={['Mobile', 'Game']}
               technologies={['Kivy', 'Android']}
               languages={['Python']}
               links={[
@@ -154,10 +154,61 @@ export default class Project extends React.Component {
             </div>
           </div>
 
+          <div class="mt-5">
+            <h3>School Projects</h3>
+            <p>Here you can see my school (FEUP) and MOOC projects. The MOOC and their projects I have done on my own and not as part of my degree.</p>
 
+            <div class="card-columns">
+              <ProjectCard
+                title="Crypto I"
+                description={
+                  <div>A MOOC about applied cryptography by Dan Boneh. Learned about the workings of hashing and public and symmetric encryption.</div>
+                }
+                types={['MOOC', 'Systems']}
+                languages={['Python']}
+                links={[
+                  <Anchor name="Course Projects" url='https://github.com/Ross65536/Crypto-I' icon={ICONS.github} />,
+                  <Anchor name="Course page" url='https://www.coursera.org/learn/crypto/' icon={ICONS.none} />
+                ]}
+                activeButtons={this.state.activeButtons}
+                toggleActiveButtons={this.toggleActiveButtons}
+              />
+
+              <ProjectCard
+                title="PintOS (WIP)"
+                description={
+                  <div>A MOOC about OS, with a big project involving implementing various OS features, such as schedulers, userlang syscalls, virtual memory, etc.</div>
+                }
+                types={['MOOC', 'Systems']}
+                languages={['C']}
+                links={[
+                  <Anchor name="Course Project" url='https://github.com/Ross65536/PintOS' icon={ICONS.github} />,
+                  <Anchor name="Course page" url='https://cs.jhu.edu/~huang/cs318/fall19/index.html' icon={ICONS.none} />
+                ]}
+                activeButtons={this.state.activeButtons}
+                toggleActiveButtons={this.toggleActiveButtons}
+              />
+
+            <ProjectCard
+                title="RJTorcher"
+                description={
+                  <div>An android procedural platforming game. Developed as part of FEUP's LPOO class. Features unit-testing. Developed along with my project colleague.</div>
+                }
+                types={['Mobile', 'Game', 'FEUP']}
+                technologies={['libgdx']}
+                languages={['Java']}
+                links={[
+                  <Anchor name="Source" url='https://github.com/Ross65536/FEUP-LPOO' icon={ICONS.github} />,
+                  <Anchor name="App" url='https://play.google.com/store/apps/details?id=ros.joao.rjtorcher' icon={ICONS.android_store} />
+                ]}
+                activeButtons={this.state.activeButtons}
+                toggleActiveButtons={this.toggleActiveButtons}
+              />
+            </div>
+
+          </div>
 
         </div>
-
       </div>
     );
   }
