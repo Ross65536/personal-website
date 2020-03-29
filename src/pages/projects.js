@@ -41,7 +41,8 @@ export default class Project extends React.Component {
               description={
                 <div>Android app for mixing music. Can generate basic sounds like, sinewaves, mix multiple tracks and export music</div>
               }
-              types={['Mobile', 'Big', '2018']}
+              types={['Mobile', 'Big']}
+              dates={['2018']}
               technologies={['Xamarin', 'Android']}
               languages={['C#']}
               links={[
@@ -57,7 +58,8 @@ export default class Project extends React.Component {
               description={
                 <div>Android game. The player controls a turret stuck on a planet and tries to destroy other planets. Features realistic in-house space ballistics physics.</div>
               }
-              types={['Mobile', 'Game', 'Big', '2017']}
+              types={['Mobile', 'Game', 'Big']}
+              dates={['2017']}
               technologies={['Kivy', 'Android']}
               languages={['Python']}
               links={[
@@ -72,7 +74,8 @@ export default class Project extends React.Component {
               description={
                 <div>A Conway game of life implementation in the CLI using rust. Features CI and full unit testing. </div>
               }
-              types={['CLI', 'Small', '2018', '2019']}
+              types={['CLI', 'Small']}
+              dates={['2018', '2019']}
               languages={['Rust']}
               links={[
                 <Anchor name="Source" url='https://github.com/Ross65536/conway-game-of-life-rs' icon={ICONS.github} />
@@ -86,7 +89,8 @@ export default class Project extends React.Component {
               description={
                 <div>A personal website written in Django with a full backend. Features a custom design, on which this website is based.</div>
               }
-              types={['Web', 'Medium', '2018']}
+              types={['Web', 'Medium']}
+              dates={['2018']}
               technologies={['Django', 'HTML', 'CSS', 'Docker']}
               languages={['Python', 'Javascript']}
               links={[
@@ -101,7 +105,8 @@ export default class Project extends React.Component {
               description={
                 <div>An interpreter for the brainfuck esoteric language. Tested using a few sample source files and compared with expected outputs. Written in Rust</div>
               }
-              types={['Systems', 'Small', '2019']}
+              types={['Systems', 'Small']}
+              dates={['2019']}
               languages={['Rust']}
               links={[
                 <Anchor name="Source" url='https://github.com/Ross65536/rbf' icon={ICONS.github} />,
@@ -116,7 +121,8 @@ export default class Project extends React.Component {
               description={
                 <div>An SPA front-end for Giphy, a GIF search engine, written in ReactJS. Features gif search and bookmarking using browser local-storage.</div>
               }
-              types={['Web', 'Small', '2018']}
+              types={['Web', 'Small']}
+              dates={['2018']}
               technologies={['HTML', 'CSS', 'ReactJS']}
               languages={['Javascript']}
               links={[
@@ -139,7 +145,8 @@ export default class Project extends React.Component {
                 description={
                   <div>An extension to the Linux kernel with real-time process schedulers meant to be run on a Raspberry Pi. Implemented as part of an internsip at CISTER. Complemented by test userland programs running a sensor+actuator system developed by my internship colleague.</div>
                 }
-                types={['CISTER', 'Systems', 'Big', '2017']}
+                types={['CISTER', 'Systems', 'Big']}
+                dates={['2017']}
                 technologies={['Linux']}
                 languages={['C']}
                 links={[
@@ -151,17 +158,35 @@ export default class Project extends React.Component {
               />
 
               <ProjectCard
-                title="InvisibleCloud API clients"
+                title="Invisible Collector API clients"
                 description={
                   <div>HTTP+JSON Clients developed for the API services provided by InvisibleCLoud for managing debt collection. Clients were developed in Java, C# and Go, each of which was thoroughly tested and validated through CI. Developed as part of internship and mantained as part of subsequent work.</div>
                 }
-                types={['InvisibleCloud', '2018', '2019']}
+                types={['InvisibleCloud', 'Big']}
+                dates={['2018', '2019']}
                 technologies={['CI']}
                 languages={['C#', 'Java', 'Go']}
                 links={[
                   <Anchor name="C# client" url='https://github.com/invisiblecloud/InvisibleCollectorLib' icon={ICONS.github} />,
                   <Anchor name="Java client" url='https://github.com/invisiblecloud/invisible-collector-java' icon={ICONS.github} />,
                   <Anchor name="Go client" url='https://github.com/invisiblecloud/invisible-collector-go' icon={ICONS.github} />,
+                  <Anchor name="API docs" url='https://portal.invisiblecollector.com/docs/api/' icon={ICONS.none} />,
+                ]}
+                activeButtons={this.state.activeButtons}
+                toggleActiveButtons={this.toggleActiveButtons}
+              />
+
+              <ProjectCard
+                title="Invisible Collector Settler"
+                description={
+                  <div>A web-page for communication between debtor and debtee. Developed a new RESTfull API backend, built on Dropwizard, and migrated and updated the old frontend design to a new SPA fontend built on Vue, customized for each company, and migrated to use the new API.</div>
+                }
+                types={['InvisibleCloud', 'Big', 'Web']}
+                dates={['2019']}
+                technologies={['VueJS', 'Dropwizard', 'HTML', 'CSS', 'JWT']}
+                languages={['Javascript', 'Java']}
+                links={[
+                  <Anchor name="Company page" url='https://www.invisiblecollector.com/' icon={ICONS.none} />,
                 ]}
                 activeButtons={this.state.activeButtons}
                 toggleActiveButtons={this.toggleActiveButtons}
@@ -181,6 +206,7 @@ export default class Project extends React.Component {
                   <div>A MOOC about applied cryptography by Dan Boneh. Learned about the workings of hashing and public and symmetric encryption.</div>
                 }
                 types={['MOOC', 'Systems']}
+                dates={['2019']}
                 languages={['Python']}
                 links={[
                   <Anchor name="Course Projects" url='https://github.com/Ross65536/Crypto-I' icon={ICONS.github} />,
@@ -196,6 +222,7 @@ export default class Project extends React.Component {
                   <div>A MOOC about OS, with a big project involving implementing various OS features, such as schedulers, userlang syscalls, virtual memory, etc.</div>
                 }
                 types={['MOOC', 'Systems']}
+                dates={['2020']}
                 languages={['C']}
                 links={[
                   <Anchor name="Course Project" url='https://github.com/Ross65536/PintOS' icon={ICONS.github} />,
@@ -205,13 +232,14 @@ export default class Project extends React.Component {
                 toggleActiveButtons={this.toggleActiveButtons}
               />
 
-            <ProjectCard
+              <ProjectCard
                 title="RJTorcher"
                 description={
                   <div>An android procedural platforming game. Developed as part of FEUP's LPOO class. Features unit-testing. Developed along with my project colleague.</div>
                 }
                 types={['Mobile', 'Game', 'FEUP']}
-                technologies={['libgdx']}
+                dates={['2017']}
+                technologies={['libgdx', 'Android']}
                 languages={['Java']}
                 links={[
                   <Anchor name="Source" url='https://github.com/Ross65536/FEUP-LPOO' icon={ICONS.github} />,
