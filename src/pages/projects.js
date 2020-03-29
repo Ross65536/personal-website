@@ -205,7 +205,7 @@ export default class Project extends React.Component {
                 description={
                   <div>A MOOC about applied cryptography by Dan Boneh. Learned about the workings of hashing and public and symmetric encryption.</div>
                 }
-                types={['MOOC', 'Systems']}
+                types={['MOOC', 'Systems', 'Big']}
                 dates={['2019']}
                 languages={['Python']}
                 links={[
@@ -221,7 +221,7 @@ export default class Project extends React.Component {
                 description={
                   <div>A MOOC about OS, with a big project involving implementing various OS features, such as schedulers, userlang syscalls, virtual memory, etc.</div>
                 }
-                types={['MOOC', 'Systems']}
+                types={['MOOC', 'Systems', 'Big']}
                 dates={['2020']}
                 languages={['C']}
                 links={[
@@ -237,7 +237,7 @@ export default class Project extends React.Component {
                 description={
                   <div>An android procedural platforming game. Developed as part of FEUP's LPOO class. Features unit-testing. Developed along with my project colleague.</div>
                 }
-                types={['Mobile', 'Game', 'FEUP']}
+                types={['Mobile', 'Game', 'FEUP', 'Big']}
                 dates={['2017']}
                 technologies={['libgdx', 'Android']}
                 languages={['Java']}
