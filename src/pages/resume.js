@@ -1,7 +1,7 @@
 import React from 'react';
 import './resume.scss';
 
-const FILE_NAME = "cv.pdf"
+const FILE_NAME = process.env.PUBLIC_URL + '/cv.pdf';
 
 export default function Resume() {
   return (
