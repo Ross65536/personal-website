@@ -57,6 +57,12 @@ body {
   ul {
       display: flex;
       padding-left: 0;
+
+      @media (max-width: 430px) {
+        li a {
+          font-size: 15pt;
+        }
+      }
   }
 }
 
