@@ -2,6 +2,7 @@ import React from 'react';
 
 
 export const ICONS = {
+  none: <i class="fas fa-link"></i>,
   github: <i class="fab fa-github"/>,
   linkedin: <i class="fab fa-linkedin"/>,
   email: <i class="fas fa-envelope"/>,
