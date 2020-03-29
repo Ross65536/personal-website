@@ -1,3 +1,5 @@
+import './project-card.scss';
+
 import React from 'react';
 
 
