@@ -80,7 +80,7 @@ function App() {
             <li><Anchor name="Github" url={GITHUB_URL} icon={ICONS.github} /></li>
             <li><Anchor name="LinkedIn" url={LINKEDIN_URL} icon={ICONS.linkedin} /></li>
             <li><Anchor name="E-Mail" url={"mailto:" + EMAIL} icon={ICONS.email} /></li>
-            <li><Anchor name="Android Store" url={ANDROID_PLAY_STORE} icon={ICONS.android_store} /></li>
+            {/* <li><Anchor name="Android Store" url={ANDROID_PLAY_STORE} icon={ICONS.android_store} /></li> */}
           </ul>
         </footer>
 
