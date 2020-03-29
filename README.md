@@ -1,6 +1,8 @@
 # Personal Website
 
-Design ported from server-side rendering https://github.com/Ross65536/PersonalBlog to SPA mode.
+Design ported [from](https://github.com/Ross65536/PersonalBlog) server-side rendering to SPA static front-end.
+
+Website hosted [here](https://ross65536.github.io/personal-website/)
 
 ## Instructions
 
