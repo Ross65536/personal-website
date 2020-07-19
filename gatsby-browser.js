@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+
+// CODE highlighting theme
+// require("prismjs/themes/prism-tomorrow.css")
+require("prismjs/themes/prism-okaidia.css")

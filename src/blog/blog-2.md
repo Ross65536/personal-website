@@ -17,3 +17,13 @@ aaa
     "a": 1
 }
 ```
+
+AA:
+
+```python
+
+def a():
+    return "aa"
+
+a() + 2
+```
