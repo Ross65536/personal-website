@@ -1,0 +1,43 @@
+
+@import 'colors';
+
+
+#page-content .card {
+    margin-bottom: 1rem;
+    background-color: $card-background-color;
+
+
+    button {
+      background-color: $text-color;
+      border-width: 0;
+      margin-bottom: 0.4rem;
+      margin-right: 0.3rem;
+    }
+    
+    button.active {
+        background-color: $anchor-color; 
+    }
+
+    button:hover {
+      background-color: $anchor-color;
+    }
+
+    .card-title {
+        margin-bottom: 1.5rem;
+        font-weight: 900;
+    }
+
+    .card-tags {
+        background-color: $card-background-color;
+        display: flex;
+        flex-direction: row;
+
+        div:first-child {
+            margin-right: 0.5rem;
+        }
+    }
+
+    .card-body a {
+        margin-right: 0.5rem;
+    }
+}
