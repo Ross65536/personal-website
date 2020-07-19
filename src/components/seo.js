@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import CONSTANTS from './constants.js';
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -33,11 +34,11 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ` + CONSTANTS.name}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: 'My web-spot',
         },
         {
           property: `og:title`,
@@ -50,23 +51,7 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
+        }
       ].concat(meta)}
     />
   )
