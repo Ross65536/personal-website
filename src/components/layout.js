@@ -18,13 +18,13 @@ import './footer.scss';
 
 import CONSTANTS from './constants.js';
 import Anchor, { ICONS } from './anchor.js';
-import profile from './profile.jpeg'
+import profile from '../assets/profile.jpeg'
 
 const NAME = CONSTANTS.name;
 const PROFESSION = "Software Engineer";
 const GITHUB_URL = "https://github.com/Ross65536";
 const LINKEDIN_URL = "https://www.linkedin.com/in/rostyslav-khoptiy/";
-const ANDROID_PLAY_STORE = "https://play.google.com/store/apps/developer?id=Ros+Software";
+// const ANDROID_PLAY_STORE = "https://play.google.com/store/apps/developer?id=Ros+Software";
 const EMAIL = "rk65536@protonmail.com";
 
 const Layout = ({ children }) => {
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
       <div className="App" id="main">
       {/* HEADER */}
       <div id="header-top">
-          <img src={profile} />
+          <img src={profile} alt="profile"/>
           <header id="header">
             <div>
               <h1 id="name">
