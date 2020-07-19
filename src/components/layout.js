@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
       <div className="App" id="main">
       {/* HEADER */}
       <div id="header-top">
-          <img src={profile} alt="profile"/>
+          {/* <img src={profile} alt="profile"/> */}
           <header id="header">
             <div>
               <h1 id="name">

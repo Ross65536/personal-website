@@ -12,31 +12,31 @@
   }
 }
 
-#header-top {
-  img {
-    object-fit: cover;
+@media (max-width: 430px) {
+  li a {
+    font-size: 15pt;
   }
-  display: flex;
 }
 
 #header {
   flex-grow: 1;
   padding: 1rem 3rem 1rem;
   ul {
-    display: flex;
-    justify-content: space-between;
-      margin: 0;
+    li {
+      margin: auto;
+    }
+    margin: 0;
   }
 }
 
 #name {
   margin-top: 1rem;
   margin-bottom: 0rem;
-  // text-align: center;
+  text-align: center;
 }
 
 #profession {
-  // text-align: center;
+  text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 2.5rem;
 }
@@ -55,6 +55,10 @@
   #header {
     #name {
       font-size: 28pt;
+    }
+
+    #profession {
+      font-size: 20pt;
     }
   }
 
@@ -87,7 +91,7 @@
 
       #name {
         margin-top: 0;
-        font-size: 22pt;
+        font-size: 32pt;
       }
     
       #profession {
@@ -96,7 +100,7 @@
       }
     
       #top-bar a {
-          // font-size: 16pt;
+          font-size: 16pt;
       }
   }
 }
@@ -126,7 +130,7 @@
 }
 
 #profession {
-  font-size: 18pt;
+  font-size: 26pt;
 }
 
 #top-bar a {
