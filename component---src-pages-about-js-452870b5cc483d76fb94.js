@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"3XHS":function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return c}));var a=t("Bl7J"),u=t("q1tI"),r=t.n(u),i=t("vrFN");function c(){return r.a.createElement(a.a,null,r.a.createElement(i.a,{title:"About"}),r.a.createElement("h2",null,"About"),"This website is running on ReactJS.")}}}]);
+//# sourceMappingURL=component---src-pages-about-js-452870b5cc483d76fb94.js.map
