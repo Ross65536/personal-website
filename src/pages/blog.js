@@ -15,9 +15,9 @@ const Blog = ({
         <SEO title="Blog" />
         Here you will find my blog-posts, in descending date order.
         <br/>
-        <div class="mt-3">
+        <ul class="mt-3">
             {Posts}
-        </div>
+        </ul>
     </Layout>
 }
 export default Blog
