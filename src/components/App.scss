@@ -1,0 +1,123 @@
+@import 'colors';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+///////////////////
+// LAYOUT
+///////////////////
+
+li {
+  list-style-type: none;
+}
+
+html {
+  height: 90%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  margin: auto;
+  margin-bottom: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+
+/* 
+* =CONTENT
+*/
+
+#page-content {
+  padding: 2rem 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+
+
+//////////////////////////
+// RESPONSIVE
+//////////////////////////
+
+@media (max-width: 60rem) {
+  body, html {
+      width: 100%;
+  }
+}
+
+
+@media (max-width: 35rem) {
+  
+  #page-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      min-height: initial;
+  }
+}
+
+
+//////////////////////////
+// TYPOGRAPHY 
+//////////////////////////
+
+
+a {
+  color: $anchor-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $anchor-color;
+  text-decoration: underline;
+}
+
+/* 
+* =CONTENT
+*
+*
+*/
+
+html {
+  background-color: $background-color;
+}
+
+body {
+  background-color: $page-background-color;
+  color: $text-color;
+  font-size: 14pt;
+}
+
+/* visited anchor */
+
+#page-content a:visited {
+  color: $visited-anchor;
+}

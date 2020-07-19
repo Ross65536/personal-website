@@ -1,0 +1,60 @@
+@import 'colors';
+
+
+///////////////////
+// LAYOUT
+///////////////////
+
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+#footer {
+  @extend %flex-center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+
+  ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0;
+      padding-left: 0;
+      li {
+          margin-left: 3rem;
+      }
+  }
+}
+
+
+//////////////////////////
+// RESPONSIVE
+//////////////////////////
+
+@media (max-width: 35rem) {
+  #footer ul {
+      li {
+          margin-left: 2rem;
+      }
+      li:first-of-type {
+          margin-left: 0;
+      }
+  }
+
+  .footer-text {
+      display: none;
+  }
+}
+
+//////////////////////////
+// TYPOGRAPHY 
+//////////////////////////
+
+
+#footer {
+  background-color:$header-footer-background-color;
+  font-family: sans-serif;
+  font-size: 12pt;
+}
