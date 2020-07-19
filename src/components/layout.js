@@ -18,7 +18,6 @@ import './footer.scss';
 
 import CONSTANTS from './constants.js';
 import Anchor, { ICONS } from './anchor.js';
-import profile from '../assets/profile.jpeg'
 
 const NAME = CONSTANTS.name;
 const PROFESSION = "Software Engineer";
@@ -33,7 +32,6 @@ const Layout = ({ children }) => {
       <div className="App" id="main">
       {/* HEADER */}
       <div id="header-top">
-          {/* <img src={profile} alt="profile"/> */}
           <header id="header">
             <div>
               <h1 id="name">
@@ -47,7 +45,7 @@ const Layout = ({ children }) => {
             <nav id="top-bar">
               <ul>
                 <li><Link to='/'>Projects</Link></li>
-                <li><Link to="/resume">Resume</Link></li>
+                <li><Link to="/resume">About me</Link></li>
                 <li><Link to="/about">About</Link></li>
               </ul>
             </nav>
