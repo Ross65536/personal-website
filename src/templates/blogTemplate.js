@@ -19,7 +19,7 @@ export default function Template({
             <small>{frontmatter.date}</small>
           </div>
           <div
-            className="blog-post-content mt-5"
+            className="blog-post-content mt-5 text-justify"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
